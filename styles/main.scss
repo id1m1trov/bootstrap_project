@@ -1,0 +1,19 @@
+
+// $default-text-color: map-get($colors , text-color ) !default;
+
+$colors: (
+    text-color: #444,
+    bg-color: #f2cd48
+);
+
+
+    
+
+
+body {
+    background-color: map-get($colors , bg-color );
+}
+
+h1{
+    @include transform(translate(50%,50%));
+}

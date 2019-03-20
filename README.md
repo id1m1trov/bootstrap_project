@@ -1,3 +1,3 @@
 # bootstrap_project
 Bootstrap project
-just a small test project with bootstrap
+just a small test project with bootstrapgit 
