@@ -1,19 +1,54 @@
-
-// $default-text-color: map-get($colors , text-color ) !default;
-
-$colors: (
-    text-color: #444,
-    bg-color: #f2cd48
-);
+@import 'partials/variables';
 
 
-    
 
-
-body {
-    background-color: map-get($colors , bg-color );
+%bg-color {
+    background-color: map-get($colors, bg-color);
 }
 
-h1{
-    @include transform(translate(50%,50%));
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @extend %bg-color;
+}
+
+.container-fluid {
+    width: 80%;
+    margin: 0 10%;
+}
+
+nav {
+    a.navbar-brand {
+        font-size: map-get($font-sizes, main-h-size ) / 1.7;
+        font-weight: bolder;
+        color: #fff !important;
+    }
+}
+
+header {
+    h1 {
+        font-family: map-get($fonts, header-font);
+        font-size: map-get($font-sizes, main-h-size);
+        color: map-get($colors, main-h-color);
+        text-shadow: 2px 2px 1px rgb(247, 246, 246);
+    }
+
+    p {
+        font-family: map-get($fonts, secondary-font);
+        font-size: map-get($font-sizes, p-size);
+        color: map-get($colors, text-color);
+        line-height: 1.5;
+        padding: 30px 10px;
+    }
+
+    button:nth-child(odd) {
+        padding: 8px 30px; 
+    }
+    button:nth-child(even) {
+        padding: 8px 20px; 
+        color: blue;
+    }
+    
 }

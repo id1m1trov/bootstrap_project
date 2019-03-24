@@ -1,4 +1,44 @@
 body {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#9e9e9e), to(#454545));
+  background-color: #eaedee;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container-fluid {
+  width: 80%;
+  margin: 0 10%;
+}
+
+nav a.navbar-brand {
+  font-size: 1.88235vw;
+  font-weight: bolder;
+  color: #fff !important;
+}
+
+header h1 {
+  font-family: "Noto Serif";
+  font-size: 3.2vw;
+  color: #8dd4ec;
+  text-shadow: 2px 2px 1px #f7f6f6;
+}
+
+header p {
+  font-family: "Mukta";
+  font-size: 1.2vw;
+  color: #777;
+  line-height: 1.5;
+  padding: 30px 10px;
+}
+
+header button:nth-child(odd) {
+  padding: 8px 30px;
+}
+
+header button:nth-child(even) {
+  padding: 8px 20px;
+  color: blue;
 }
 /*# sourceMappingURL=main.css.map */
