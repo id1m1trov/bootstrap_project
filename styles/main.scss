@@ -1,4 +1,5 @@
 @import 'partials/variables';
+@import 'partials/mixins';
 
 
 
@@ -8,35 +9,113 @@
 
 * {
     box-sizing: border-box;
+    transition: transform .2s ease-in-out;
+    -webkit-transition: transform .2s ease-in-out;
+    -moz-transition: transform .2s ease-in-out;
+    -ms-transition: transform .2s ease-in-out;
+    -o-transition: transform .2s ease-in-out;
+}
+
+p {
+    color: map-get($colors, text-color);
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 body {
     @extend %bg-color;
 }
 
-.container-fluid {
-    width: 80%;
-    margin: 0 10%;
+section {
+    padding-top: 3%;
+    padding-bottom: 5%;
+    background-color: #fff;
 }
 
+// conteiner
+.container-fluid {
+    width: 90%;
+    margin: 0 5%;
+}
+
+// row
+.row {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+
+
+// new line
+.line {
+    width: 13%;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin-top: 4%;
+    margin-bottom: 5%;
+}
+
+/*    massage box   */
+.massage-box {
+
+    h2 {
+        margin: 20px 0;
+    }
+
+    h3 {
+        color: map-get($colors, text-color);
+        font-size: map-get($font-sizes, small-header);
+    }
+
+    a {
+        &:hover {
+
+            &:after {
+                transform: translateX(5px) rotate(45deg);
+                -webkit-transform: translateX(5px) rotate(45deg);
+                -moz-transform: translateX(5px) rotate(45deg);
+                -ms-transform: translateX(5px) rotate(45deg);
+                -o-transform: translateX(5px) rotate(45deg);
+            }
+        }
+
+        &:after {
+            @include link-caret;
+        }
+    }
+
+    @media (max-width: 1091px) {
+        width: 100%;
+    }
+}
+
+// Nnavigation 
+
+/* ------------------------------------- Navigation ---------------------------------------*/
 nav {
     a.navbar-brand {
-        font-size: map-get($font-sizes, main-h-size ) / 1.7;
+        font-size: map-get($font-sizes, main-h-size) / 1.7;
         font-weight: bolder;
         color: map-get($colors, logo-color);
     }
+
     .fa-camera {
-        
         margin-right: 5px;
     }
+
     //@media (max-width: 1080px) {
-        .navbar-toggler {
-            position: absolute;
-            right: 30px;
-        }
-    
+    .navbar-toggler {
+        position: absolute;
+        right: 30px;
+    }
+
 }
 
+
+/* ------------------------------------- Header section ---------------------------------------*/
 header {
 
     h1 {
@@ -50,26 +129,28 @@ header {
     p {
         font-family: map-get($fonts, secondary-font);
         font-size: map-get($font-sizes, p-size);
-        color: map-get($colors, text-color); 
+        color: map-get($colors, text-color);
         line-height: 1.5;
         padding: 30px 0px;
     }
 
     button {
         margin-bottom: 10px;
-    
+
         &:nth-child(odd) {
-            padding: 8px 25px; 
+            padding: 8px 25px;
         }
+
         &:nth-child(even) {
-            padding: 8px 10px; 
+            padding: 8px 10px;
             color: blue;
             background-color: #fff;
         }
     }
+
     @media (max-width: 1100px) {
         h1 {
-            font-size:2.3rem;
+            font-size: 2.3rem;
             padding-top: 70px;
         }
 
@@ -77,21 +158,300 @@ header {
             font-size: 1rem;
         }
     }
+
     @media (max-width: 991px) {
         & {
             text-align: center;
         }
 
-        .hero-img {    
+        .hero-img {
             width: 60%;
-            position: absolute;
-            left: 17%;
+            position: relative;
+            left: -3%;
             top: -50px;
             z-index: -1;
         }
     }
 }
 
-.sec1{
-    background-color: #fff;
+/* ------------------------------------- Sec1 Header section ---------------------------------------*/
+section.welcome-sec {
+    .welcome-text {
+        p {
+            font-size: map-get($font-sizes, header-size);
+            color: black;
+
+            span.new-line {
+                line-height: .5;
+
+                &:before {
+                    @include new-line;
+                }
+            }
+        }
+    }
+
+    .msg-image {
+        width: 280px;
+        margin: 40px auto;
+    }
+
+    .doc-image-container {
+
+        img {
+            box-shadow: 0 60px 60px -20px rgba(25, 45, 100, .15);
+            position: relative;
+            z-index: 2;
+        }
+
+        &::after {
+            content: "";
+            width: 316px;
+            height: 316px;
+            position: absolute;
+            bottom: -64px;
+            left: -48px;
+            background-image: url("../images/bg-doks-dottED.jpg");
+            background-size: 306px 306px;
+        }
+
+        /* show on mobile only image */
+        &:first-child {
+            margin-bottom: 70px;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    /* making space between second and third row */
+    .row:nth-child(2) {
+        margin-bottom: 150px;
+    }
+}
+
+/* ------------------------------------- Sec2 Partners section ---------------------------------------*/
+section.partners {
+    padding-bottom: 15%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.partners-row {
+
+    &::after {
+        content: "";
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        left: 18%;
+        margin-top: 190px;
+        background-image: url("../images/partners/illustration-spot-planning.webp");
+        background-size: 300px 200px;
+
+        @media (max-width: 1380px) {
+            display: none;
+        }
+    }
+
+    .partners-box {
+        height: 120px;
+        max-width: 205px;
+        min-width: 205px;
+        background-color: rgb(249, 250, 250);
+        padding: 0;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+
+
+        .partners-logos {
+            width: 225px;
+            height: auto;
+            margin-left: -10px;
+
+            &:hover {
+                transform: scale(1.09);
+                -webkit-transform: scale(1.09);
+                -moz-transform: scale(1.09);
+                -ms-transform: scale(1.09);
+                -o-transform: scale(1.09);
+            }
+        }
+
+        &:hover {
+            background-color: #F1F3F3;
+        }
+
+        .plus-badge {
+            position: absolute;
+            background-color: #9FA6FF;
+            color: #fff;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 0px 4px;
+            border-bottom-right-radius: 4px;
+            border-top-left-radius: 4px;
+        }
+
+        /* centralize Shopify and Woocommerce images*/
+        &:nth-of-type(5),
+        &:nth-of-type(7) {
+            img {
+                margin-left: -10px !important;
+            }
+        }
+
+        // text box - last box 
+        &:last-of-type {
+            a {
+                display: block;
+                height: 100%;
+                padding-top: 45px;
+            }
+        }
+
+    }
+}
+
+
+/* ------------------------------------- Sec3 Customers section ---------------------------------------*/
+
+section.customers {
+    background-color: map-get($colors, bg-color);
+
+
+    .carousel {
+        width: 600px;
+        height: 600px;
+        background-color: #fff;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+        box-shadow: 0 15px 30px -4px rgba(136, 155, 166, .4);
+
+        &:hover {
+            cursor: pointer;
+            #teamsnap-video, #basecamp-video, #zapier-video {
+                background-size: 640px 370px;
+            }
+        }
+    }
+
+    /*  Carousel Indicators */
+    .carousel-indicators {
+        background-color: #fff;
+        width: 122px;
+        bottom: -14px;
+        border-radius: 15px;
+        padding: 0;
+        cursor: auto;
+
+
+        li {
+            background-color: #57b0fb;
+            height: 5px;
+            width: 5px;
+            border-radius: 100%;
+            margin: 2px 7px;
+            padding: 3px;
+        }
+    }
+
+    /* Left Section - Carousel */
+    .my-carousel {
+
+        #teamsnap-video {
+            @include customers-video-bg;
+            background-image: url("../images/Customers/video--teamsnap.jpg");
+        }
+        #basecamp-video {
+            @include customers-video-bg;
+            background-image: url("../images/Customers/video--basecamp.jpg");
+        }
+        #zapier-video{
+            @include customers-video-bg;
+            background-image: url("../images/Customers/video--zapier-2.jpg");
+        }
+
+        .play-icon {
+            @include center-el;
+            width: 85px;
+            height: 85px;
+            background-color: rgba(49, 151, 214, .7);
+            border-radius: 100%;
+
+            svg {
+                @include center-el;
+                fill: white;
+                margin-left: 3px;
+            }
+        }
+
+        /* carousel video content */
+        .video-content {
+
+            height: 240px;
+
+            &::before {
+                background: url("../images/Customers/bg-wave.svg") no-repeat;
+                background-position: center;
+                background-size: 100% 100%;
+                content: "";
+                width: 100%;
+                height: 60px;
+                position: absolute;
+                bottom: 40%;
+            }
+
+            img {
+                position: absolute;
+                bottom: 44%;
+                left: 6%;
+                width: 70px;
+                border-radius: 100%;
+                border: 3px solid #fff;
+                box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .25);
+            }
+
+            blockquote {
+                padding: 30px 60px;
+                quotes: "'""'";
+
+                p{
+                    text-indent: -10px;
+                    font-size: 18px;
+                     color: #314351;
+                }
+
+                footer.blockquote-footer {
+                    &:before {
+                        content: " " !important;
+                    }
+
+                    font-size: 14px;
+                    color: #748494;
+                    line-height: 1.6;
+
+                    cite {
+                        font-weight: 600;
+                        color: #314351;
+                        font-style: normal;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Right Section - customers logos*/
+    button {
+        margin-top: 30px;
+    }
+
+    .customer-logo-box {
+        min-width: 160px;
+        max-width: 160px;
+    }
 }

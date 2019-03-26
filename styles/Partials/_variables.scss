@@ -1,9 +1,9 @@
 
 $colors: (
-    logo-color: #555,
-    text-color: #777,
     bg-color: #F8FAFF,
-    main-h-color: #8dd4ec
+    main-h-color: #8dd4ec,
+    logo-color: #555,
+    text-color: #748494,
 );
 
 $fonts: (
@@ -14,5 +14,6 @@ $fonts: (
 $font-sizes: (
     main-h-size: 2.6rem,
     header-size: 2rem,
+    small-header: 1.3rem,
     p-size: 1.1rem
 );
