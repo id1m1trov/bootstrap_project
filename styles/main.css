@@ -30,8 +30,17 @@ section {
 }
 
 .container-fluid {
-  width: 80%;
-  margin: 0 10%;
+  max-width: 1280px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1348px) {
+  .container-fluid {
+    max-width: 95%;
+  }
 }
 
 .row {
@@ -506,12 +515,15 @@ section.customers .customer-logo-box {
 /* ------------------------------------- Sec5 Our People section ---------------------------------------*/
 section.our-people .people-left-side img {
   width: 90px;
+  height: 90px;
   padding: 0;
   margin: 0;
 }
 
 section.our-people .people-left-side .people-link a {
-  font-size: 1.3rem;
+  font-size: 18px;
+  line-height: 1.6em;
+  font-weight: 600;
 }
 
 section.our-people .people-left-side .people-link a:hover:after {
@@ -551,26 +563,35 @@ section.our-people .people-left-side .people-link a:after {
   -o-transition: transform .2s ease-in-out;
 }
 
-section.our-people .pleople-right-side img.crazy-girl {
+section.our-people .pleople-right-side {
   position: relative;
 }
 
-section.our-people .pleople-right-side img.crazy-girl::before {
+section.our-people .pleople-right-side::before {
   content: "";
-  position: absolute;
-  background: red;
   width: 200px;
   height: 200px;
+  position: absolute;
+  top: 0px;
+  right: -100px;
   background: url("../images/bg-people-brush.png") no-repeat;
-  background-size: 100% 100%;
-  z-index: 1;
+  background-size: 200px 200px;
+  z-index: 0;
 }
 
-section.our-people .pleople-right-side img.crazy-girl::after {
-  content: "asd";
-  width: 100px;
-  height: 100px;
-  background-color: red;
+section.our-people .pleople-right-side::after {
+  content: " ";
+  height: 326px;
+  width: 446px;
+  position: absolute;
+  left: -80px;
+  bottom: -40px;
+  background: url("../images/bg-people-dotted.png") no-repeat;
+  background-size: 446px 326px;
+  z-index: 0;
+}
+
+section.our-people .pleople-right-side img.crazy-girl {
   z-index: 1;
 }
 /*# sourceMappingURL=main.css.map */

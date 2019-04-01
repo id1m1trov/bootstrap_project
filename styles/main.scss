@@ -36,8 +36,15 @@ section {
 
 // conteiner
 .container-fluid {
-    width: 80%;
-    margin: 0 10%;
+    max-width: 1280px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 1348px) {
+        max-width: 95%;
+    }
 }
 
 // row
@@ -490,6 +497,7 @@ section.our-people {
 
         img {
             width: 90px;
+            height: 90px;
             padding: 0;
             margin: 0;
         }
@@ -497,7 +505,9 @@ section.our-people {
         .people-link {
 
             a {
-                font-size: map-get($font-sizes, small-header);
+                font-size: 18px;
+                line-height: 1.6em;
+                font-weight: 600;
 
                 &:hover {
 
@@ -521,26 +531,35 @@ section.our-people {
 
     .pleople-right-side {
 
-        img.crazy-girl{
-            position: relative; 
+        position: relative;
 
-            &::before {
-                content: "";
-                position: absolute;
-                background: red;
-                width: 200px;
-                height: 200px;
-                background: url("../images/bg-people-brush.png") no-repeat;
-                background-size: 100% 100%;
-                z-index: 1;
-            }
-            &::after {
-                content: "asd";
-                width: 100px;
-                height: 100px;
-                background-color: red;
-                z-index: 1;
-            }
-        } 
+        &::before {
+            content: "";
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0px;
+            right: -100px;
+            background: url("../images/bg-people-brush.png") no-repeat;
+            background-size: 200px 200px;
+             z-index: 0;
+        }
+
+        &::after {
+            content: " ";
+            height: 326px;
+            width: 446px;
+            position: absolute;
+            left: -80px;
+            bottom: -40px;
+            background: url("../images/bg-people-dotted.png") no-repeat;
+            background-size: 446px 326px;
+            z-index: 0;
+        }
+
+        img.crazy-girl {
+            z-index: 1;
+        }
+
     }
 }
