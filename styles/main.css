@@ -1,4 +1,4 @@
-body {
+body, section.our-people {
   background-color: #F8FAFF;
 }
 
@@ -30,8 +30,8 @@ section {
 }
 
 .container-fluid {
-  width: 90%;
-  margin: 0 5%;
+  width: 80%;
+  margin: 0 10%;
 }
 
 .row {
@@ -312,12 +312,12 @@ section.customers {
   background-color: #F8FAFF;
   /*  Carousel Indicators */
   /* Left Section - Carousel */
+  /* Modal styles*/
   /* Right Section - customers logos*/
 }
 
 section.customers .carousel {
   width: 600px;
-  height: 600px;
   background-color: #fff;
   border-top-left-radius: 14px;
   border-top-right-radius: 14px;
@@ -329,7 +329,9 @@ section.customers .carousel:hover {
   cursor: pointer;
 }
 
-section.customers .carousel:hover #teamsnap-video, section.customers .carousel:hover #basecamp-video, section.customers .carousel:hover #zapier-video {
+section.customers .carousel:hover #teamsnap-video,
+section.customers .carousel:hover #basecamp-video,
+section.customers .carousel:hover #zapier-video {
   background-size: 640px 370px;
 }
 
@@ -472,6 +474,26 @@ section.customers .my-carousel .video-content blockquote footer.blockquote-foote
   font-style: normal;
 }
 
+section.customers .modal-dialog {
+  max-width: 900px;
+}
+
+section.customers .modal-dialog .modal-body {
+  position: relative;
+  padding: 0px;
+}
+
+section.customers .modal-dialog .modal-body .close {
+  position: absolute;
+  right: -30px;
+  top: -40px;
+  z-index: 999;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #fff;
+  opacity: 1;
+}
+
 section.customers button {
   margin-top: 30px;
 }
@@ -479,5 +501,76 @@ section.customers button {
 section.customers .customer-logo-box {
   min-width: 160px;
   max-width: 160px;
+}
+
+/* ------------------------------------- Sec5 Our People section ---------------------------------------*/
+section.our-people .people-left-side img {
+  width: 90px;
+  padding: 0;
+  margin: 0;
+}
+
+section.our-people .people-left-side .people-link a {
+  font-size: 1.3rem;
+}
+
+section.our-people .people-left-side .people-link a:hover:after {
+  transform: translateX(5px) rotate(45deg);
+  -webkit-transform: translateX(5px) rotate(45deg);
+  -moz-transform: translateX(5px) rotate(45deg);
+  -ms-transform: translateX(5px) rotate(45deg);
+  -o-transform: translateX(5px) rotate(45deg);
+}
+
+section.our-people .people-left-side .people-link a:after {
+  width: 6px;
+  height: 6px;
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-top-style: solid;
+  border-right-style: solid;
+  content: "";
+  margin-left: .3rem;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-tansform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+  -webkit-transition: transform .2s ease-in-out;
+  -moz-transition: transform .2s ease-in-out;
+  -ms-transition: transform .2s ease-in-out;
+  -o-transition: transform .2s ease-in-out;
+}
+
+section.our-people .pleople-right-side img.crazy-girl {
+  position: relative;
+}
+
+section.our-people .pleople-right-side img.crazy-girl::before {
+  content: "";
+  position: absolute;
+  background: red;
+  width: 200px;
+  height: 200px;
+  background: url("../images/bg-people-brush.png") no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+
+section.our-people .pleople-right-side img.crazy-girl::after {
+  content: "asd";
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  z-index: 1;
 }
 /*# sourceMappingURL=main.css.map */

@@ -36,8 +36,8 @@ section {
 
 // conteiner
 .container-fluid {
-    width: 90%;
-    margin: 0 5%;
+    width: 80%;
+    margin: 0 10%;
 }
 
 // row
@@ -326,15 +326,17 @@ section.customers {
 
     .carousel {
         width: 600px;
-        height: 600px;
         background-color: #fff;
         border-top-left-radius: 14px;
         border-top-right-radius: 14px;
         box-shadow: 0 15px 30px -4px rgba(136, 155, 166, .4);
 
-        &:hover { 
+        &:hover {
             cursor: pointer;
-            #teamsnap-video, #basecamp-video, #zapier-video {
+
+            #teamsnap-video,
+            #basecamp-video,
+            #zapier-video {
                 background-size: 640px 370px;
             }
         }
@@ -367,11 +369,13 @@ section.customers {
             @include customers-video-bg;
             background-image: url("../images/Customers/video--teamsnap.jpg");
         }
+
         #basecamp-video {
             @include customers-video-bg;
             background-image: url("../images/Customers/video--basecamp.jpg");
         }
-        #zapier-video{
+
+        #zapier-video {
             @include customers-video-bg;
             background-image: url("../images/Customers/video--zapier-2.jpg");
         }
@@ -420,10 +424,10 @@ section.customers {
                 padding: 30px 60px;
                 quotes: "'""'";
 
-                p{
+                p {
                     text-indent: -10px;
                     font-size: 18px;
-                     color: #314351;
+                    color: #314351;
                 }
 
                 footer.blockquote-footer {
@@ -445,6 +449,27 @@ section.customers {
         }
     }
 
+    /* Modal styles*/
+    .modal-dialog {
+        max-width: 900px;
+
+        .modal-body {
+            position: relative;
+            padding: 0px;
+
+            .close {
+                position: absolute;
+                right: -30px;
+                top: -40px;
+                z-index: 999;
+                font-size: 2rem;
+                font-weight: normal;
+                color: #fff;
+                opacity: 1;
+            }
+        }
+    }
+
     /* Right Section - customers logos*/
     button {
         margin-top: 30px;
@@ -453,5 +478,69 @@ section.customers {
     .customer-logo-box {
         min-width: 160px;
         max-width: 160px;
+    }
+}
+
+
+/* ------------------------------------- Sec5 Our People section ---------------------------------------*/
+section.our-people {
+    @extend %bg-color;
+
+    .people-left-side {
+
+        img {
+            width: 90px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .people-link {
+
+            a {
+                font-size: map-get($font-sizes, small-header);
+
+                &:hover {
+
+                    &:after {
+                        transform: translateX(5px) rotate(45deg);
+                        -webkit-transform: translateX(5px) rotate(45deg);
+                        -moz-transform: translateX(5px) rotate(45deg);
+                        -ms-transform: translateX(5px) rotate(45deg);
+                        -o-transform: translateX(5px) rotate(45deg);
+                    }
+                }
+
+                &:after {
+                    @include link-caret;
+
+
+                }
+            }
+        }
+    }
+
+    .pleople-right-side {
+
+        img.crazy-girl{
+            position: relative; 
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: red;
+                width: 200px;
+                height: 200px;
+                background: url("../images/bg-people-brush.png") no-repeat;
+                background-size: 100% 100%;
+                z-index: 1;
+            }
+            &::after {
+                content: "asd";
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                z-index: 1;
+            }
+        } 
     }
 }
