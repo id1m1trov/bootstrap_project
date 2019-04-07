@@ -1,20 +1,23 @@
 
 $colors: (
     bg-color: #F8FAFF,
-    main-h-color: #8dd4ec,
+    main-h-color: #071e57,
+    sec-h-color: #405261,
     logo-color: #555,
     text-color: #748494,
+    main-blue: #1292EE
 );
 
 $fonts: (
-    header-font: "Noto Serif",
-    secondary-font: "Mukta"
+    
 );
 
 $font-sizes: (
-    main-h-size: 2.6rem,
+    main-h-size: 3.2rem,
     header-size: 2rem,
-    small-header: 1.3rem,
-    p-size: 1.1rem
+    small-header: 1.5rem,
+    p-size: 1rem
 );
-
+ 
+ $header-font:'Oswald', sans-serif;
+ $text-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 

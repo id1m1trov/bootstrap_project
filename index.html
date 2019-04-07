@@ -9,7 +9,7 @@
     <link rel="icon" href="images/favicon-child.ico" type="image/gif" sizes="16x16">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Mukta|Noto+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -23,53 +23,197 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
+
+
+
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light ">
-        <div class="container-fluid">
-            <!-- Logo -->
-            <a href="#" class="navbar-brand h1"><span class="fas fa-camera"></span>A.G.Odysseas</a>
+    <div class="row navigation">
 
-            <!-- Toggle button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleNava"
-                aria-controls="toggleNava" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <nav class="navbar navbar-expand-lg w-100">
+            <!-- brand logo -->
+            <a class="navbar-brand" href="#"><i class="fas fa-fill-drip"></i> Our Brand</a>
 
-            <!-- Navigation bar -->
-            <div class="collapse navbar-collapse" id="toggleNava">
-                <ul class="navbar-nav ml-auto pr-5">
-                    <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-home" aria-hidden="true"></i>
-                            Home</a>
+            <!-- right links -->
+            <div class="d-none d-lg-inline-block">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item active" id="product-link">
+                        <a href="#" class="nav-link">Product <i class="fas fa-chevron-down"></i></a>
+
+                        <!-- Dropdown Products -->
+                        <ul class="dropdown-list product-dropdown">
+                            <li class="dropdown-links active-link m-1"><a href="">
+                                    <span class="dropdown-img nav-spirit-img" id="nav-link-1"></span>
+                                    <div class="d-inline-block align-top">
+                                        <strong>Help Desk</strong>
+                                        <p>Mailbxes with a personal touch</p>
+                                    </div>
+                                </a></li>
+                            <li class="dropdown-links m-2 active-link"><a href="">
+                                    <span class="dropdown-img nav-spirit-img" id="nav-link-2"></span>
+                                    <div class="d-inline-block align-top">
+                                        <strong>Docs </strong>
+                                        <p>Create and share knowledge</p>
+                                    </div>
+                                </a></li>
+                            <li class="dropdown-links m-2 active-link"><a href="">
+                                    <span class="dropdown-img nav-spirit-img" id="nav-link-3"></span>
+                                    <div class="d-inline-block align-top">
+                                        <strong>Becone</strong>
+                                        <p>Way more than live char</p>
+                                    </div>
+                                </a></li>
+                            <li class="dropdown-links m-2 active-link"><a href="">
+                                    <span class="dropdown-img nav-spirit-img" id="nav-link-4"></span>
+                                    <div class="d-inline-block align-top">
+                                        <strong>Reports</strong>
+                                        <p>Real-time data at your fingertips</p>
+                                    </div>
+                                </a></li>
+                            <li class="dropdown-links m-2 active-link"><a href="">
+                                    <span class="dropdown-img nav-spirit-img" id="nav-link-5"></span>
+                                    <div class="d-inline-block align-top">
+                                        <strong>Integration</strong>
+                                        <p>Connect your favorite tools</p>
+                                    </div>
+                                </a></li>
+
+                            <li class="dropdown-links active-link"><a href="">
+                                    <strong>Company Plan</strong>
+                                    <p>Designet to grow with teams 0f 25+</p>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item"><a href="#" class="nav-link">Work</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Protfolio</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+                    <li class="nav-item" id="resources-link">
+                        <a href="#" class="nav-link">Resources <i class="fas fa-chevron-down"></i></a>
+
+                        <!-- Dropdown Resources -->
+                        <ul class="dropdown-list resources-dropdown">
+                            <li class="dropdown-links m-1"><a href="">
+                                    <strong>Blog</strong>
+                                    <p>Culture, learnings, and product updates</p>
+                                </a></li>
+                            <li class="dropdown-links m-1"><a href="">
+                                    <strong>Success Stories</strong>
+                                    <p>See how other teams use </p>
+                                </a></li>
+                            <li class="dropdown-links m-1"><a href="">
+                                    <strong>Classes</strong>
+                                    <p>Help Scout tips, best practices, and Q&A</p>
+                                </a></li>
+                            <li class="dropdown-links m-1"><a href="">
+                                    <strong>Help Cdenter<i class="fas fa-long-arrow-alt-up arrow-rot"></i></strong>
+                                    <p>Mailbxes with a personal touch</p>
+                                </a></li>
+                            <li class="dropdown-links d-none">hack for last of type on second dropdown (I`ve just burn
+                                out)</li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
                 </ul>
             </div>
 
-            <!-- Right buttons -->
-            <div class="log-buttons">
+            <!-- left buttons -->
+            <div class="log-buttons ml-auto d-none d-lg-inline-block">
                 <a href="" class="mr-3">log in</a>
-                <button class="btn-primary">Free Trail</button>
+                <button class="btn btn-primary">Free Trail</button>
             </div>
-        </div>
-    </nav>
+
+            <!-- Toggle button -->
+            <button class="btn btn-link d-inline d-lg-none" data-toggle="d-block" data-target="#mobile-nav"
+                onclick="getElementById('mobile-nav').classList.toggle('d-block');">
+                <i class="fas fa-hamburger"></i>
+            </button>
+
+
+            <!-- Mobile only navigation -->
+            <div class="mobile-nav d-none" id="mobile-nav">
+
+                <!-- Main nav links / spirits bgs -->
+                <div class="row px-2">
+                    <div class="col-12 nav-items d-flex align-items-center mt-4 m-2">
+                        <a href="" class="nav-spirit-img" id="nav-link-1"></a>
+                        <a href="" class="nav-links">Help Desk</a>
+                    </div>
+                    <div class="col-12 nav-items d-flex align-items-center m-2">
+                        <a href="" class="nav-spirit-img" id="nav-link-2"></a>
+                        <a href="" class="nav-links">Docs</a>
+                    </div>
+                    <div class="col-12 nav-items d-flex align-items-center m-2">
+                        <a href="" class="nav-spirit-img" id="nav-link-3"></a>
+                        <a href="" class="nav-links">Beacon</a>
+                    </div>
+                    <div class="col-12 nav-items d-flex align-items-center m-2">
+                        <a href="" class="nav-spirit-img" id="nav-link-4"></a>
+                        <a href="" class="nav-links">Reports</a>
+                    </div>
+                    <div class="col-12 nav-items d-flex align-items-center m-2">
+                        <a href="" class="nav-spirit-img" id="nav-link-5"></a>
+                        <a href="" class="nav-links">Integrations</a>
+                    </div>
+
+
+
+                    <!-- Line -->
+                    <div class="col-12">
+                        <hr>
+                    </div>
+
+                    <!-- Small bottom links -->
+                    <div class="col-6 pr-5">
+                        <ul class="nav-small-links">
+                            <li><a href="">Company Plan</a></li>
+                            <li><a href="">Pricing</a></li>
+                            <li><a href="">Success Stories</a></li>
+                            <li><a href="">Classes</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <ul class="nav-small-links">
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">HelpU</a></li>
+                            <li><a href="">Guid</a></li>
+                            <li><a href="">Webinars</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Free Trail Button -->
+                    <div class="col-12 px-4">
+                        <button class="btn btn-primary mb-2 mx-auto py-3 trail-btn">Free Trail</button>
+                    </div>
+                    <!-- CLOSE Button -->
+                    <button type="button" class="close" data-dismiss="mobile-nav" aria-label="Close"
+                        onclick="getElementById('mobile-nav').classList.toggle('d-block');">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+
+            </div>
+        </nav>
+
+    </div>
 
     <header>
+
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 pr-5">
-                    <h1>There’s a better way to talk with your customers.</h1>
-                    <p>
+            <div class="row mb-5">
+                <div class="col-md-6 col-sm-12 pr-0 pr-md-5">
+                    <h1 class="pr-0 pr-lg-5">There’s a better way to talk with your customers.</h1>
+                    <p class="px-5 px-md-0">
                         Help Scout is designed with your customers in mind. Provide email and live chat with a
                         personal touch, and deliver help content right where your customers need it, all in one
                         place, all for one low price.
                     </p>
-                    <button class="btn btn-primary btn-lg"><i class="fas fa-fist-raised"></i> Get Started</button>
-                    <button class="btn btn-outline-secondary btn-lg"><i class="far fa-play-circle"></i> Whatch
+                    <button class="btn btn-primary btn-lg mr-3 d-block d-sm-inline-block mx-auto"><i
+                            class="fas fa-fist-raised"></i> Get Started</button>
+                    <button class="btn btn-outline-secondary btn-lg d-block d-sm-inline-block mx-auto"><i
+                            class="far fa-play-circle"></i> Whatch
                         Demo</button>
                 </div>
-                <div class="col-lg-6 col-md-12  align-self-center">
+                <div class="col-md-6 col-sm-12  align-self-center">
                     <img src="images/illustration02.png" alt="" class="img-fluid hero-img">
                 </div>
             </div>
@@ -79,15 +223,15 @@
     <main>
         <section class="welcome-sec">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row  my-5 py-5">
                     <!-- welcome text -->
                     <div class="col welcome-text text-center">
-                        <p>
-                            Help Scout empowers customer-centric
+                        <p class="lead">
+                            Our Brand empowers customer-centric
                             <span class="new-line"> with tools that make every </span>
                             <span class="new-line"> more human and helpful. </span>
                         </p>
-                        <hr class="line">
+                        <hr class="line mb-5">
                     </div>
                 </div>
 
@@ -95,12 +239,12 @@
                 <div class="row">
 
                     <!-- left illustration image -->
-                    <div class="col-lg-7 pl-5">
+                    <div class="col-lg-7">
                         <img src="images/email-img.png" class="img-fluid" alt="email look and feal">
                     </div>
 
                     <!-- right massage box -->
-                    <div class="col-lg-5 col-md-12 align-self-center pr-5 pl-5">
+                    <div class="col-lg-5 col-md-12 align-self-center pr-5">
                         <div class="massage-box">
                             <h3>Massage</h3>
                             <h2>Look and feal matter</h2>
@@ -124,11 +268,10 @@
                             <h2>Make amazing docs in minutes</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi aperiam similique
                                 ducimus atque optio autem eaque accusantium expedita recusandae libero.</p>
-                            <p><a href="#">more docs info</a></p>
+                            <p><a href="#">More Docs Info</a></p>
                         </div>
                         <!-- image under massage box -->
-                        <img src="images/illustrat-rack.jpg" class="img-fluid msg-image text-center"
-                            alt="ilistration rack">
+                        <img src="images/illustrat-rack.jpg" class="img-fluid msg-image" alt="ilistration rack">
                     </div>
                     <!-- show on large screen image -->
                     <div
@@ -145,7 +288,7 @@
                     <div class="col-lg text-center">
                         <div class="massage-box m-auto pt-5">
                             <h3>Integration</h3>
-                            <h2>Connect Help Scout with all the things</h2>
+                            <h2>Connect Our Brand with all the things</h2>
                             <p class=" lg-w-50 mx-auto">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                 Exercitationem, ullam
                                 distinctio architecto tenetur provident non!</p>
@@ -154,35 +297,35 @@
                 </div>
                 <!-- justify-content-center -->
                 <div class="row justify-content-end partners-row">
-                    <div class="col-2 col-md-6 col-sm-12 partners-box m-1">
+                    <div class="col-2  col-sm-12 partners-box m-1">
                         <a href="#">
                             <img src="images/partners/slack.png" class="partners-logos" alt="slack logo ">
                         </a>
                     </div>
-                    <div class="col-2 col-md-6 col-sm-12 partners-box m-1">
+                    <div class="col-2  col-sm-12 partners-box m-1">
                         <span class="plus-badge">PLUS</span>
                         <a href="#">
                             <img src="images/partners/hubspot.png" class="partners-logos" alt="hibspot logo ">
                         </a>
                     </div>
-                    <div class="col-2 col-md-6 col-sm-12 partners-box m-1">
+                    <div class="col-2  col-sm-12 partners-box m-1">
                         <a href="#">
                             <img src="images/partners/mailchimp.png" class="partners-logos" alt="mailchimp logo ">
                         </a>
                     </div>
-                    <div class="col-2 col-md-6 col-sm-12 partners-box m-1">
+                    <div class="col-2  col-sm-12 partners-box m-1">
                         <span class="plus-badge">PLUS</span>
                         <a href="#">
                             <img src="images/partners/email-img.png" class="partners-logos" alt="email logo">
                         </a>
                     </div>
-                    <div class="col-2 col-md-6 col-sm-12 partners-box m-1">
+                    <div class="col-2  col-sm-12 partners-box m-1">
                         <a href="#">
                             <img src="images/partners/woocommerce.png" class="partners-logos mx-auto d-block"
                                 alt="woocommerce logo ">
                         </a>
                     </div>
-                    <div class="col-2 col-md-6 col-sm-12 partners-box m-1 ">
+                    <div class="col-2  col-sm-12 partners-box m-1 ">
                         <span class="plus-badge">PLUS</span>
                         <a href="#">
                             <img src="images/partners/jira.png" class="partners-logos" alt="jira logo ">
@@ -207,16 +350,16 @@
                     <div class="col-lg-6 order-lg-2">
                         <div class="pl-lg-5 ml-lg-5 pt-lg-5 mt-lg-5 text-center text-lg-left">
                             <h2>Trusted by more than
-                                <br>9,000 businesses in 140
-                                <br>countries.
+                                <br class="d-none d-lg-inline">9,000 businesses in 140
+                                <br class="d-none d-lg-inline">countries.
                             </h2>
-                            <button class="btn btn-outline-primary btn-lg ">Meet our customers</button>
+                            <button class="btn btn-outline-primary btn-lg mb-5">Meet our customers</button>
 
-                            <div class="row justify-content-center  justify-content-lg-start">
-                                <div class="col-12 col-sm-6 col-md-2 col-lg-6 col-xl-4 m-1 p-0 customer-logo-box">
+                            <div class="row justify-content-center  justify-content-lg-start mb-5 mb-lg-0 mt-3 ml-n4">
+                                <div class="col-12 col-sm-6 col-md-2 col-lg-6 col-xl-4 m-1 p-0 customer-logo-box ">
                                     <img src="images/Customers/grubhub.png" alt="github logo" title="Github">
                                 </div>
-                                <div class="col-12 col-sm-6 col-md-2 col-lg-6 col-xl-4 m-1 p-0 customer-logo-box">
+                                <div class="col-12 col-sm-6 col-md-2 col-lg-6 col-xl-4 m-1 p-0 customer-logo-box pl-1">
                                     <img src="images/Customers/trello.png" alt="trello logo" title="Trello">
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-2 col-lg-6 col-xl-4 m-1 p-0 customer-logo-box">
@@ -367,33 +510,33 @@
                 </div>
 
                 <div class="row mt-sm-0">
-                    <div class="col-12 col-lg-6 people-left-side pr-5">
+                    <div class="col-12 col-lg-6 people-left-side pr-5 mt-5 pt-5">
                         <div class="row mx-md-5 px-md-5 px-lg-0 mx-lg-0">
                             <div class="col-12 col-md-2 d-flex justify-content-md-center">
                                 <img src="images/illustration-spot-trophy.jpg" class="" alt="trophy image">
                             </div>
-                            <div class="col-12 col-md-10 people-link pr-5">
-                                <h3 class="ml-lg-3"><a href="#">World class 24x6 Support</a></h3>
+                            <div class="col-12 col-md-10 people-link pr-5 mb-5">
+                                <h3 class="ml-lg-3 mb-3"><a href="#">World class 24x6 Support</a></h3>
                                 <p class="ml-lg-3">These friendly and knowledgeable folks are available via email and
                                     chat.</p>
                             </div>
                         </div>
-                        <div class="row mx-md-5 px-md-5 px-lg-0 mx-lg-0">
+                        <div class="row mx-md-5 px-md-5 px-lg-0 mx-lg-0  d-flex justify-content-center">
                             <div class="col-12 col-md-2 d-flex justify-content-md-center">
                                 <img src="images/illustration-spot-laptop.jpg" alt="laptop image">
                             </div>
-                            <div class="col-12 col-md-10 people-link pr-5">
-                                <h3 class="ml-lg-3"><a href="#">Training & Classes</a></h3>
+                            <div class="col-12 col-md-10 people-link pr-5 mb-5">
+                                <h3 class="ml-lg-3  mb-3"><a href="#">Training & Classes</a></h3>
                                 <p class="ml-lg-3">These friendly and knowledgeable folks are available via email and
                                     chat.</p>
                             </div>
                         </div>
-                        <div class="row mx-md-5 px-md-5 px-lg-0 mx-lg-0">
+                        <div class="row mx-md-5 px-md-5 px-lg-0 mx-lg-0  d-flex justify-content-center">
                             <div class="col-12 col-md-2 d-flex justify-content-md-center">
                                 <img src="images/illustration-spot-education.jpg" alt="books image">
                             </div>
-                            <div class="col-12 col-md-10 people-link pr-5">
-                                <h3 class="ml-lg-3"><a href="#">Education from HelpU</a></h3>
+                            <div class="col-12 col-md-10 people-link pr-5 mb-5">
+                                <h3 class="ml-lg-3  mb-3"><a href="#">Education from HelpU</a></h3>
                                 <p class="ml-lg-3">These friendly and knowledgeable folks are available via email and
                                     chat.</p>
                             </div>
@@ -407,7 +550,112 @@
                 </div>
             </div>
         </section>
+
+        <section class="subscribe-form">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col- mx-auto text-center">
+                        <h2>Get started with our brand</h2>
+                        <p> A better experience for your customers, fewer headaches for your team.<br> You'll be set up
+                            in minutes.</p>
+
+                        <form action="" class=" justify-content-center my-5">
+                            <div class="form-group">
+                                <label for="email-subscribe" class="sr-only">Email</label>
+                                <input type="text" class="form-control p-2 mr-3 d-block d-md-inline-block "
+                                    id="email-subscribe" placeholder="Email Address">
+                                <button type="submit" class="btn btn-primary p-2 d-block d-md-inline-block">Get
+                                    Started</button>
+                            </div>
+                        </form>
+
+                        <p>See Our Brand in action. <a class="caret d-block d-md-inline-block" href="#">Get a Demo</a>
+                        </p>
+                        <img src="images/reading-girl.webp"
+                            class="subscribe-img d-none d-md-inline-block position-absoliute"
+                            alt="illustration of a girl reading a book">
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
     </main>
+
+    <footer class="main-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col- col-lg-4 text-center text-lg-left">
+                    <a href="#" class="navbar-brand h1"><span class="fas fa-camera"></span></a>
+                    <h3 class="pr-lg-5 mr-lg-5">Tools for the world's most customer-centric businesses</h3>
+                    <img src="images/b-corp-white.png" alt="b certified logo"
+                        class="certified-logo pt-4 d-none d-lg-inline">
+                    <hr class="d-sm-block d-lg-none footer-line">
+
+                </div>
+                <div class="col-md-3 col-lg-2 text-center text-md-left">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#">Help Desk</a></li>
+                        <li><a href="">Knowladge Base</a></li>
+                        <li><a href="">Live Chat <span class="new">NEW</span></a></li>
+                        <li><a href="">Integration</a></li>
+                        <li><a href="">Reports</a></li>
+                        <li><a href="">iOS and Android</a></li>
+                        <li><a href="">More Features</a></li>
+                        <li><a href="">Company Plan <span class="new">NEW</span></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-lg-2 text-center text-md-left">
+                    <h4>Learn</h4>
+
+                    <ul>
+                        <li><a href="">​​Customer Support Skills</a></li>
+                        <li><a href="">Designing Knowledge Bases</a></li>
+                        <li><a href="">Chat & Messaging</a></li>
+                        <li><a href="">Customer Support Benchmarks</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-lg-2 text-center text-md-left">
+                    <h4>Company</h4>
+
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Term of Sercices</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-lg-2 text-center text-md-left">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">Developers<i class="fas fa-long-arrow-alt-up"></i></a></li>
+                        <li><a href="#">Help Docs<i class="fas fa-long-arrow-alt-up"></i></a></li>
+                        <li><a href="#">Free Training</a></li>
+                        <li><a href="#">Contact Sales</a></li>
+                        <li><a href="#">Status <span class="status"><i class="fas fa-caret-up"></i> 99.98%</span><i
+                                    class="fas fa-long-arrow-alt-up"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-line">
+
+            <div class="row m-0 pb-4 mt-n3 footer-social text-center text-lg-left">
+                <div class="col-md-12 col-lg-6 pb-3">
+                    <i class="fab fa-twitter footer-soc-icon"></i>
+                    <i class="fab fa-facebook footer-soc-icon"></i>
+                    <i class="fab fa-linkedin footer-soc-icon"></i>
+                </div>
+                <div class="col-md-12 col-lg-6 footer-copyright text-wrap text-md-nowrap">
+                    <img src="images/made-by.png" alt="hand wright line" class="d-inline">
+                    <p class="d-inline cpright-text">Made by hand in over 60 cities around the world.</p>
+                    <p class="d-md-block d-lg-inline cpright mt-3  text-nowrap">© 2019 Our Brand</p>
+                    <img src="images/b-corp-white.png" alt="b certified logo" class="certified-logo d-lg-none d-inline">
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 
@@ -431,7 +679,30 @@
     <script>
         jQuery(document).ready(function ($) {
 
-            // toggle class for partners logo boxes
+
+            /*               Fix Navigation                       */ 
+            $(document).scroll(function () {
+                ($(document).scrollTop() >= 300) ? $(".navbar").addClass("fixed-nav"): $(".navbar")
+                    .removeClass("fixed-nav");
+            });
+            // -----------------------------------------------------
+
+            
+
+
+            /*             Hover function for dropdown menus          */
+            $(".dropdown-links").hover(function () {
+                $(".dropdown-links").addClass("frozen-link");
+                $(this).removeClass("frozen-link");
+            });
+            // refreshing classes
+            $(".nav-link").hover(function () {
+                $(".dropdown-links").removeClass("frozen-link");
+            });
+            // -----------------------------------------------------
+
+
+            /*             toggle class for partners logo boxes        */
             var hideRemoveClass = function () {
                 var winWidth = document.body.clientWidth;
 
@@ -450,7 +721,7 @@
                 hideRemoveClass();
             });
             hideRemoveClass();
-            // ---------------------------------------
+            // ---------------------------------------------------------
 
 
             // Gets the video src from the data-src on each button
